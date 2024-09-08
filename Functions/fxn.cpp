@@ -2,23 +2,28 @@
 using namespace std;
 
 // function definition
-int sayHello()
+double sum(double a, double b)
 {
-    cout << "hello\n";
-    return 3;
+    double s = a + b;
+    return s;
+}
+
+// min of 2 num
+int minTwo(int a, int b) // parameters -> copy of arguments
+{
+    if (a < b)
+    {
+        return a;
+    }
+    else
+    {
+        return b;
+    }
 }
 
 int main()
 {
-    sayHello(); // fxn invoke or call
-
-    int a = 10;
-    int b = 5;
-
-    int val = sayHello();
-    cout << "val = " << val << endl;
-
-    cout << sayHello() << endl;
-
+    cout << sum(10.5, 5.7) << endl;
+    cout << minTwo(2, 5); // arguments -> Actual value
     return 0;
 }
